@@ -1,0 +1,12 @@
+.account-box {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.account-cont {
+    width:600px;
+    background: #e8f0ff;
+    padding: 50px;
+    border-radius: 5px;
+}
