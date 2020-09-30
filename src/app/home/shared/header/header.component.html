@@ -1,0 +1,24 @@
+<header>
+    <p *ngIf="user">Logged in as: {{ user?.email }} - {{ user?.displayName }}</p>
+  
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+          <div class="container">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link" routerLink="/covid-report-1">Covidreport-1</a>
+              <a class="nav-item nav-link" routerLink="/covid-report-2">Covidreport-2</a>
+              
+            </div>
+            <div>
+            <button class="btn btn-primary mr-2" *ngIf="!user" (click)="register()">Register</button>
+            <button class="btn btn-primary" *ngIf="user" (click)="logout()">Logout</button>
+            <button class="btn btn-primary" *ngIf="!user" (click)="login()">Login</button>
+        </div>
+          </div>
+      </div>
+        </nav>
+  </header>

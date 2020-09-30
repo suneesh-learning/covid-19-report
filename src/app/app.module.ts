@@ -13,7 +13,7 @@ import { RegisterComponent } from './auth/register/register.component';
 import { HomeComponent } from './home/home.component';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import {FormsModule} from '@angular/forms'
-
+import {HomeModule} from './home/home.module'
 
 @NgModule({
   declarations: [
@@ -31,7 +31,8 @@ import {FormsModule} from '@angular/forms'
     AngularFirestoreModule,
     AngularFireDatabaseModule,
     AngularFireAuthModule,
-    FormsModule
+    FormsModule,
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
