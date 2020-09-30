@@ -14,6 +14,7 @@ import { HomeComponent } from './home/home.component';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import {FormsModule} from '@angular/forms'
 import {HomeModule} from './home/home.module'
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import {HomeModule} from './home/home.module'
     AngularFireDatabaseModule,
     AngularFireAuthModule,
     FormsModule,
-    HomeModule
+    HomeModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

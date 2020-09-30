@@ -1,1 +1,99 @@
-<p>covid-report1 works!</p>
+<div class="container">
+    <div class="row">
+       <div class="col">
+        <div class="card text-white bg-primary">
+            <div class="card-body">
+              <h4>Total Cases</h4>
+              <P>{{cases}}</P>
+            </div>
+          </div>
+       </div>
+       <div class="col">
+        <div class="card text-white bg-warning  ">
+          <div class="card-body">
+            <h4>Active cases</h4>
+            <P>{{active}}</P>
+           </div>
+          </div>
+       </div>
+    
+       <div class="col">
+        <div class="card text-white bg-success">
+            <div class="card-body">
+             <h4>Total Recovered</h4>
+             <P>{{recovered}}</P>
+            </div>
+          </div>
+       </div>
+       <div class="col">
+        <div class="card text-white bg-danger">
+            <div class="card-body">
+            <h4>Total Deaths</h4>
+            <p>{{deaths}}</p>
+            </div>
+          </div>
+       </div>
+  
+    </div>
+
+
+
+    <div class="row m-t-20" *ngFor="let country of countries">
+     <div class="col-md-12 m-b-15"><!--Repeatable Div col-md-12-->
+        <mat-accordion>
+            <mat-expansion-panel (opened)="panelOpenState = true"
+                                 (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                <div class="row flex-fill">
+                    <div class="col-md-4">
+                  {{country.country}}
+                    </div>
+                    <div class="col-md-8">
+                  {{country.cases}} - {{country.active}} {{country.deaths}} {{country.recovered}}
+                    </div>
+                </div>
+                </mat-panel-title>
+         
+              </mat-expansion-panel-header>
+      <div>
+        <h4>District wise data</h4>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">First</th>
+              <th scope="col">Last</th>
+              <th scope="col">Handle</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td colspan="2">Larry the Bird</td>
+              <td>@twitter</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+            </mat-expansion-panel>
+          </mat-accordion>
+     </div>
+
+
+
+    </div>
+</div>
